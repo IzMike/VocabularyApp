@@ -13,8 +13,6 @@ public class Commands {
     File vocabJsonPath = new File(System.getenv(".env"));
     public void registerWord(String word, String translation) {
 
-        Scanner sc = new Scanner(System.in);
-
         this.word = word;
         this.translation = translation;
 
