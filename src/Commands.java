@@ -10,7 +10,7 @@ public class Commands {
     String word;
     String translation;
 
-    File vocabJsonPath = new File("C:\\Users\\micha\\OneDrive\\שולחן העבודה\\vocab");
+    File vocabJsonPath = new File(System.getenv(".env"));
     public void registerWord(String word, String translation) {
 
         Scanner sc = new Scanner(System.in);
