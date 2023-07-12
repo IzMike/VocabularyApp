@@ -1,13 +1,22 @@
+import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        System.out.println("Digital Vocabulary Notebook.");
-        System.out.println("What would you like to do?\n" +
-                "1. Register A New Word\n" +
-                "2. Delete A Word (WIP)\n" +
-                "3. Search A Word (WIP)\n");
+        Scanner sc = new Scanner(System.in);
+        Commands commands = new Commands();
+
+        String word;
+        String translation;
+
+        System.out.println("Enter a word and translation");
+
+        word = sc.next();
+        translation = sc.next();
+
+        commands.registerWord(word, translation);
 
     }
 
