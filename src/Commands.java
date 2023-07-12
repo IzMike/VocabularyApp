@@ -1,23 +1,21 @@
 import net.sf.json.JSONObject;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Commands {
 
-    String word;
-    String translation;
+    private String word;
+    private String translation;
 
-    File vocabJsonPath = new File(System.getenv(".env"));
+    File vocabJsonPath = new File(System.getenv("PATH"));
     public void registerWord(String word, String translation) {
 
         this.word = word;
         this.translation = translation;
 
         //initializes the json object which will store all the values and keys
-        JSONObject vocabJson = new JSONObject();
+        JSONObject vocabJson = new JSONObject(false);
 
         //creates keys and values (according to user input)
         vocabJson.put("word", word);
