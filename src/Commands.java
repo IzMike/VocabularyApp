@@ -21,9 +21,6 @@ public class Commands {
         //initializes the json object which will store all the values and keys
         JSONObject vocabJson = new JSONObject();
 
-        word = sc.next();
-        translation = sc.next();
-
         //creates keys and values (according to user input)
         vocabJson.put("word", word);
         vocabJson.put("translation", translation);
